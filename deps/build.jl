@@ -3,7 +3,7 @@ using Compat
 
 @BinDeps.setup
 
-version=v"2.7.1"
+version=v"2.7.2"
 
 aliases = []
 if is_windows()
@@ -32,7 +32,7 @@ libhttp_parser = library_dependency("libhttp_parser", aliases=aliases,
 
 if is_unix()
     src_arch = "v$version.zip"
-    src_url = "https://github.com/nodejs/http-parser/archive/$src_arch"
+    src_url = "https://github.com/maurolopes/http-parser/archive/$src_arch"
     src_dir = "http-parser-$version"
 
     target = "libhttp_parser.$(Libdl.dlext)"
